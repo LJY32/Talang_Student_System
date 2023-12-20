@@ -1,6 +1,6 @@
 import java.util.Scanner;
 import studentdata.*;
-
+//偷个懒，先不写I/O
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
