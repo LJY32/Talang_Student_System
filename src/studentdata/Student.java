@@ -1,13 +1,13 @@
 package studentdata;
 public class Student {
-    private String name;
-    private int id;
-    private int chineseScore;
-    private int mathScore;
-    private int englishScore;
-    private int totalScore;
+    private final String name;
+    private final String id;
+    private final int chineseScore;
+    private final int mathScore;
+    private final int englishScore;
+    private final int totalScore;
 
-    public Student(String name, int id, int chineseScore, int mathScore, int englishScore) {
+    public Student(String name, String id, int chineseScore, int mathScore, int englishScore) {
         this.name = name;
         this.id = id;
         this.chineseScore = chineseScore;
@@ -20,7 +20,7 @@ public class Student {
         return name;
     }
 
-    public int getId() {
+    public String getId() {
         return id;
     }
 
