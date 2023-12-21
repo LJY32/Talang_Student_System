@@ -3,10 +3,12 @@ import java.util.ArrayList;
 import files.*;
 public class StudentManager {
     public static ArrayList<Student> students;
-    public StudentManager() {
-        students = new ArrayList<Student>();
-    }
 
+    public StudentManager() {
+        students = new ArrayList<>();
+        CsvOperation csvOperation = new CsvOperation();
+        students = csvOperation.loadStudentsFromCSV();
+    }
     public void addStudent(Student student) {
         students.add(student);
         CsvOperation.writeToFile();
@@ -33,9 +35,10 @@ public class StudentManager {
         System.out.println("找不到对应学号的学生: " + id);
     }
     public void printAllStudents() {
-        System.out.println("Name\tID\tChinese\tMath\tEnglish\tTotal");
+        System.out.println("姓名\t学号\t语文成绩\t数学成绩\t英语成绩\t总分");
         for (Student student : students) {
             System.out.println(student.getName() + "\t" + student.getId() + "\t" + student.getChineseScore() + "\t" + student.getMathScore() + "\t" + student.getEnglishScore() + "\t" + student.getTotalScore());
         }
     }
+
 }

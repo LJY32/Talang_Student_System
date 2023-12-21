@@ -1,4 +1,6 @@
 import java.util.Scanner;
+
+import files.CsvOperation;
 import studentdata.*;
 
 public class Main {
@@ -26,7 +28,7 @@ public class Main {
                     int mathScore = scanner.nextInt();
                     System.out.print("请输入学生 "+name+" 的英语成绩: ");
                     int englishScore = scanner.nextInt();
-                    Student student = new Student(name, id, chineseScore, mathScore, englishScore);
+                    Student student = new Student(name, id, chineseScore, mathScore, englishScore,chineseScore+englishScore+mathScore);
                     manager.addStudent(student);
                     break;
                 case 2: // Delete student

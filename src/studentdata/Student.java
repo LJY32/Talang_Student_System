@@ -7,13 +7,13 @@ public class Student {
     private final int englishScore;
     private final int totalScore;
 
-    public Student(String name, String id, int chineseScore, int mathScore, int englishScore) {
+    public Student(String name, String id, int chineseScore, int mathScore, int englishScore,int totalScore) {
         this.name = name;
         this.id = id;
         this.chineseScore = chineseScore;
         this.mathScore = mathScore;
         this.englishScore = englishScore;
-        this.totalScore = chineseScore + mathScore + englishScore;
+        this.totalScore = totalScore;
     }
 
     public String getName() {
