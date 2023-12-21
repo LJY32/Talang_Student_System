@@ -8,6 +8,7 @@ public class CsvOperation {
     private static final String csvFilePath = "students.csv";
     public static void writeToFile() {//这个函数得改
         try {
+            cleanData();
             FileWriter writer = new FileWriter(csvFilePath,true); //使用追加模式
             for (Student student : StudentManager.students) {
                 writer.append(student.getName());
@@ -27,6 +28,15 @@ public class CsvOperation {
             writer.close();
         } catch (IOException e) {
             System.out.println("写入学生数据时发生错误");
+            e.printStackTrace();
+        }
+    }
+    private static void cleanData(){
+        try{
+            FileWriter writer = new FileWriter(csvFilePath);
+            writer.write("");
+            writer.close();
+        }catch (IOException e){
             e.printStackTrace();
         }
     }
