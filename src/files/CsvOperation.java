@@ -6,7 +6,7 @@ import java.io.IOException;
 
 public class CsvOperation {
     private static final String csvFilePath = "students.csv";
-    public static void writeToFile() {
+    public static void writeToFile() {//这个函数得改
         try {
             FileWriter writer = new FileWriter(csvFilePath,true); //使用追加模式
             for (Student student : StudentManager.students) {
